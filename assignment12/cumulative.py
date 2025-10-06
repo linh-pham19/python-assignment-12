@@ -14,7 +14,6 @@ def task2(database_file: pathlib.Path | str) -> None:
         database_connection = sqlite3.connect(database_file)
         db_cursor = database_connection.cursor()
 
-        # SQL query to get order_id and total_price for each order
         # Need to join orders, line_items, and products tables
         order_totals_query = """
             SELECT o.order_id, SUM(p.price * li.quantity) AS total_price

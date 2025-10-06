@@ -5,7 +5,6 @@ import re
 
 
 def task3():
-    # Load the Plotly wind dataset
     df = pldata.wind(return_type='pandas')
     
     print("First 10 lines of the DataFrame:")
@@ -18,7 +17,6 @@ def task3():
     print(f"\nData types before cleaning:")
     print(df.dtypes)
     
-    # Check the current format of the 'strength' column
     print(f"\nSample 'strength' values before cleaning:")
     print(df['strength'].head(10))
     
